@@ -1,4 +1,4 @@
-# Web-Php-MySQL Extra Oefening
+# Web-Php-MySQL Extra Oefening  (25 punten)
 
 ## CRUD-systeem voor een takenlijst (To-Do List)
 ### Doelen:
@@ -10,17 +10,17 @@ Opdracht: Bouw een webapplicatie waarin een gebruiker een lijst van taken kan be
 
 ### Vereisten:
 
-#### HTML en CSS/Bootstrap:
+#### HTML en CSS/Bootstrap: (5 punten)
 
 - Maak een formulier voor het invoeren van een nieuwe taak.
 - Toon de lijst van taken in een gestileerde tabel, met knoppen om een taak te bewerken of te verwijderen.
 - Zorg dat de layout responsief is met Bootstrap.
 
-#### JavaScript:
+#### JavaScript: (2 punten)
 
 Voeg client-side validatie toe aan het invoerformulier (bijv. taaknaam mag niet leeg zijn).
 
-#### PHP en MySQL:
+#### PHP en MySQL: (8 punten)
 
 - Maak een MySQL-database met een tabel tasks (kolommen: id, task, status, created_at).
 - Maak PHP-scripts voor CRUD-acties:
@@ -29,7 +29,7 @@ Voeg client-side validatie toe aan het invoerformulier (bijv. taaknaam mag niet 
   * Update: Wijzig de naam of status van een taak.
   * Delete: Verwijder een taak.
 
-### Extra uitdaging:
+### Extra uitdaging: (10 punten)
 
 + Voeg een filter toe (JavaScript) om taken te sorteren op status (bijv. "Alle", "Voltooid", "Niet voltooid").
 + Voeg Bootstrap modals toe voor het bewerken en verwijderen van taken in plaats van nieuwe pagina’s.
