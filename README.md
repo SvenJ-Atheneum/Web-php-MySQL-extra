@@ -1,46 +1,38 @@
-# Web-Php-MySQL
+# Web-Php-MySQL Extra Oefening
 
-## Start
+## CRUD-systeem voor een takenlijst (To-Do List)
+### Doelen:
 
-Deze repository bevat de beginsituatie van onze dynamische website.
+Leren werken met databases (MySQL) en server-side verwerking (PHP) voor het creëren, lezen, updaten en verwijderen (CRUD) van gegevens.
+Front-end validatie en interactie via JavaScript.
+Gebruik van Bootstrap voor een responsief en gestileerd interface.
+Opdracht: Bouw een webapplicatie waarin een gebruiker een lijst van taken kan beheren (To-Do List). Gebruikers moeten taken kunnen toevoegen, bekijken, wijzigen en verwijderen. De applicatie moet een MySQL-database gebruiken om de taken op te slaan en een PHP-backend voor de interactie met de database. JavaScript moet worden gebruikt voor client-side validatie en dynamische updates, zonder de pagina te herladen (AJAX).
 
-## Opgaves
+### Vereisten:
 
-### Cookies
+#### HTML en CSS/Bootstrap:
 
-Zorg ervoor dat het eerste scherm van de website de keuze biedt om cookies te aanvaarden of te weigeren.
-Als de gebruiker de cookies weigert wordt die automatisch doorgestuurd naar www.google.com.
-Indien hij de cookies accepteert ziet hij de startpagina van onze website.
+- Maak een formulier voor het invoeren van een nieuwe taak.
+- Toon de lijst van taken in een gestileerde tabel, met knoppen om een taak te bewerken of te verwijderen.
+- Zorg dat de layout responsief is met Bootstrap.
 
-### Wedstrijdformulier
+#### JavaScript:
 
-#### 1. Maken en Uitlezen
+Voeg client-side validatie toe aan het invoerformulier (bijv. taaknaam mag niet leeg zijn).
 
-We maken een een formulier waarmee deelnemers zich kunnen inschrijven om deel te nemen aan de fotowedstrijd.
-Een voorbeeld van zo'n formulier vind je in de powerpoint én cursus in Hoofdstuk 12.
+#### PHP en MySQL:
 
-Dit formulier wordt ingelezen door een php-script en de ingevulde waarden worden op het scherm getoond als bevestiging van inschrijving.
-Diezelfde gegevens worden via e-mail verzonden naar de organisator van de wedstrijd. We maken hiervoor een test-gebruiker aan op onze localhost via de Mercury mailserver van XAMPP.
+- Maak een MySQL-database met een tabel tasks (kolommen: id, task, status, created_at).
+- Maak PHP-scripts voor CRUD-acties:
+  * Create: Voeg een nieuwe taak toe.
+  * Read: Haal taken op en toon ze in de tabel.
+  * Update: Wijzig de naam of status van een taak.
+  * Delete: Verwijder een taak.
 
-#### 2. Bewaren?
+### Extra uitdaging:
 
-Een e-mail sturen voor elke inschrijving is niet zo handig. De mailbox van de organisator raakt snel overvol.
-Een betere oplossing is om alle inschrijvingen te bewaren in een databank. We maken dus een MySQL of MariaDB databank aan, met daarin de nodige tabellen en velden voor de komende oefeningen.
-
-Zorg ervoor dat de gegevens die we uitlezen uit het formulier niet meer via e-mail worden verzonden maar wel mooi worden bewaard in de databank. Het bevestigingsbericht blijft wel nog steeds verschijnen op de website.
-We gebruiken voor onze verbinding met de databank de [MySQLi-connector](https://www.php.net/manual/en/book.mysqli.php)
-
-#### 3. Uitlezen
-
-We zorgen voor een extra pagina in onze website die een lijst toont van alle inschrijvingen. We halen de inschrijvingen op uit de databank en tonen deze in een responsive tabel.
-
-#### 4. Login?
-
-Uiteraard moet niet iedereen de lijst met inschrijvingen kunnen bekijken. We gaan er dus voor zorgen dat enkel een ingelogde gebruiker deze pagina mag bekijken.
-
-Hiervoor maken we een eenvoudige login-pagina aan. We vragen de gebruiker op aan de databank en controleren of het paswoord correct is.
-Is de gebruiker correct ingelogd dan kan hij de lijst de inschrijvingen bekijken, anders krijgt hij een foutmelding en moet hij opnieuw proberen in te loggen.
-
-#### 5. Aanpassen? Verwijderen?
-
-Uiteraard kan een 'admin' ook indien nodig de gegevens aanpassen van een inschrijving, of de inschrijving helemaal verwijderen.
++ Voeg een filter toe (JavaScript) om taken te sorteren op status (bijv. "Alle", "Voltooid", "Niet voltooid").
++ Voeg Bootstrap modals toe voor het bewerken en verwijderen van taken in plaats van nieuwe pagina’s.
++ Gebruik AJAX om de lijst dynamisch bij te werken zonder de pagina te herladen.
++ Maak meerdere gebruikers. Gebruikers kunnen enkel hun eigen taken bekijken, bewerken en verwijderen.
++ Een 'verantwoordelijke' kan taken toekennen aan gebruikers. De toegekende gebruiker kan de taak niet bewerken of verwijderen  maar wel als 'Voltooid' markeren.
